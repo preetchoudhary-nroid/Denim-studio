@@ -236,8 +236,8 @@
 <div id="page-checkout" class="page">
   <div class="checkout-page">
     <h1>Checkout</h1>
-    <p>Secure payment powered by Stripe</p>
-    <div class="stripe-note">🔒 Your payment is encrypted and secure via Stripe</div>
+    <p>Secure payment </p>
+    <div class="stripe-note">🔒 Your payment is encrypted and secure </div>
     <div class="checkout-section">
       <h3>Contact</h3>
       <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"/></div>
@@ -256,7 +256,7 @@
       <div class="form-group"><label>State</label><select><option>Delhi</option><option>Maharashtra</option><option>Karnataka</option><option>Tamil Nadu</option></select></div>
     </div>
     <div class="checkout-section">
-      <h3>Payment (Stripe)</h3>
+      <h3>Payment </h3>
       <div class="form-group"><label>Card number</label><input type="text" placeholder="1234 5678 9012 3456"/></div>
       <div class="form-row">
         <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY"/></div>
@@ -278,7 +278,7 @@
     <h2>Where It All Started</h2>
     <p>Denim Studio was born in a small workshop in Delhi, where a group of artisans decided the world needed fewer throwaway clothes and more pieces worth keeping. We started with one fabric, one silhouette, and one obsession: making the perfect pair of jeans.</p>
     <h2>The Craft</h2>
-    <p>We source our denim from heritage mills — both in Japan and in Ahmedabad, Gujarat — where shuttle looms still run the way they did decades ago. The result is a fabric with natural slub, character, and the ability to fade uniquely with each wearer. Every garment is cut and sewn by hand in our Delhi studio.</p>
+    <p>We source our denim where shuttle looms still run the way they did decades ago. The result is a fabric with natural slub, character, and the ability to fade uniquely with each wearer. Every garment is cut and sewn by hand in our Delhi studio.</p>
     <h2>Our Promise</h2>
     <p>No fast fashion. No cutting corners. Every piece is built to last years, not seasons. We believe in clothes that become yours — that bear the marks of your life, your fades, your adventures.</p>
     <div class="values-grid">
@@ -338,26 +338,28 @@
 
 <script>
 const products=[
-  {id:1,name:'Classic Straight Raw',cat:'jeans',price:2499,badge:'New',emoji:'👖',desc:'Heavyweight 14oz raw selvedge denim. Straight fit, unsanforized, ready to be broken in.'},
-  {id:2,name:'Slim Taper Washed',cat:'jeans',price:1999,badge:'',emoji:'👖',desc:'Pre-washed medium blue denim with a modern slim taper fit. Soft from day one.'},
-  {id:3,name:'Type III Trucker Jacket',cat:'jacket',price:3499,badge:'Bestseller',emoji:'🧥',desc:'Iconic trucker silhouette in 12oz stonewashed indigo. Brass buttons, two chest pockets.'},
-  {id:4,name:'Oversized Chore Jacket',cat:'jacket',price:3999,badge:'',emoji:'🧥',desc:'Relaxed chore coat cut from heavy ecru denim. Four large utility pockets.'},
-  {id:5,name:'Work Shirt — Indigo',cat:'shirt',price:1599,badge:'',emoji:'👕',desc:'Lightweight chambray work shirt in deep indigo. Spread collar, two flap pockets.'},
-  {id:6,name:'Western Snap Shirt',cat:'shirt',price:1799,badge:'New',emoji:'👕',desc:'Vintage-wash denim western shirt with pearlescent snap buttons. Built for the road.'},
-  {id:7,name:'Cutoff Shorts',cat:'shorts',price:1299,badge:'',emoji:'🩳',desc:'Cut and frayed from our raw denim deadstock. Unfinished hem, relaxed through the hip.'},
-  {id:8,name:'Belt — Tan Leather',cat:'accessory',price:799,badge:'',emoji:'🪢',desc:'Full-grain tan leather belt with a raw brass buckle. The perfect finish.'},
-  {id:9,name:'Canvas Tote — Raw',cat:'accessory',price:649,badge:'',emoji:'👜',desc:'Heavyweight raw canvas tote with Denim Studio stamp. Carries everything you need.'},
-  {id:10,name:'Selvedge ID Cap',cat:'accessory',price:899,badge:'Limited',emoji:'🧢',desc:'Unstructured 6-panel cap made from selvedge denim offcuts. One size.'},
-  {id:11,name:'High Rise Mom Jean',cat:'jeans',price:2199,badge:'',emoji:'👖',desc:'High-waisted relaxed mom fit in a vintage acid wash. Cropped ankle length.'},
-  {id:12,name:'Double Knee Painter',cat:'jeans',price:2799,badge:'New',emoji:'👖',desc:'Work pant silhouette with reinforced double knee panels in rigid indigo denim.'},
+  {id:1,name:'Embroidered Denim Vest',cat:'jacket',price:2499,badge:'New',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680170/WhatsApp_Image_2026-05-08_at_7.35.01_PM_l41oou.jpg',desc:'Handcrafted black denim vest with intricate white floral embroidery. Soft, breathable & made with love in our Delhi studio.'},
+  {id:2,name:'Linen Cargo Pants — Ivory',cat:'jeans',price:1999,badge:'',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680171/WhatsApp_Image_2026-05-08_at_7.23.54_PM_kch7q5.jpg',desc:'Relaxed ivory linen-blend cargo pants with drawstring waist and utility side pocket. Timeless comfort, natural elegance.'},
+  {id:3,name:'Camo Tote Bag',cat:'accessory',price:1299,badge:'Bestseller',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680171/WhatsApp_Image_2026-05-08_at_7.23.55_PM_fttnpr.jpg',desc:'Heavy-duty camo canvas tote with front button pocket and embroidered Army Corps badge. Rugged carry for everyday use.'},
+  {id:4,name:'Camo Sleeveless Jacket',cat:'jacket',price:3499,badge:'Limited',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680171/WhatsApp_Image_2026-05-10_at_4.15.53_PM_sbky5c.jpg',desc:'Military camo sleeveless jacket with dual chest pockets, embroidered badge detail and bold inner lining. Rookie Edition.'},
+  {id:5,name:'Work Shirt — Indigo',cat:'shirt',price:1599,badge:'',img:'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80',desc:'Lightweight chambray work shirt in deep indigo. Spread collar, two flap pockets.'},
+  {id:6,name:'Western Snap Shirt',cat:'shirt',price:1799,badge:'New',img:'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&q=80',desc:'Vintage-wash denim western shirt with pearlescent snap buttons. Built for the road.'},
+  {id:7,name:'Cutoff Shorts',cat:'shorts',price:1299,badge:'',img:'https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&q=80',desc:'Cut and frayed from our raw denim deadstock. Unfinished hem, relaxed through the hip.'},
+  {id:8,name:'Belt — Tan Leather',cat:'accessory',price:799,badge:'',img:'https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=600&q=80',desc:'Full-grain tan leather belt with a raw brass buckle. The perfect finish.'},
+  {id:9,name:'Canvas Tote — Raw',cat:'accessory',price:649,badge:'',img:'https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80',desc:'Heavyweight raw canvas tote with Denim Studio stamp. Carries everything you need.'},
+  {id:10,name:'Selvedge ID Cap',cat:'accessory',price:899,badge:'Limited',img:'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80',desc:'Unstructured 6-panel cap made from selvedge denim offcuts. One size.'},
+  {id:11,name:'High Rise Mom Jean',cat:'jeans',price:2199,badge:'',img:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80',desc:'High-waisted relaxed mom fit in a vintage acid wash. Cropped ankle length.'},
+  {id:12,name:'Double Knee Painter',cat:'jeans',price:2799,badge:'New',img:'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80',desc:'Work pant silhouette with reinforced double knee panels in rigid indigo denim.'},
 ];
-
 let cart=[];
 let currentFilter='all';
 
-function renderProductCard(p,gridId){
+function renderProductCard(p){
   return `<div class="product-card" onclick="showProduct(${p.id})">
-    <div class="product-img"><div class="product-img-inner">${p.emoji}</div>${p.badge?`<span class="product-badge">${p.badge}</span>`:''}</div>
+    <div class="product-img" style="padding:0;overflow:hidden;">
+      <img src="${p.img}" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.style.display='none'"/>
+      ${p.badge?`<span class="product-badge">${p.badge}</span>`:''}
+    </div>
     <div class="product-info">
       <div class="product-name">${p.name}</div>
       <div class="product-desc">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</div>
