@@ -355,12 +355,15 @@ const products=[
 let cart=[];
 let currentFilter='all';
 
-function renderProductCard(p,gridId){
+function renderProductCard(p, gridId) {
   return `<div class="product-card" onclick="showProduct(${p.id})">
-    <div class="product-img"><div class="product-img-inner">${p.img}</div>${p.badge?`<span class="product-badge">${p.badge}</span>`:''}</div>
+    <div class="product-img">
+      <img src="${p.img}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='https://placehold.co/400x500?text=Denim+Studio'">
+      ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+    </div>
     <div class="product-info">
       <div class="product-name">${p.name}</div>
-      <div class="product-desc">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</div>
+      <div class="product-desc">${p.cat.charAt(0).toUpperCase() + p.cat.slice(1)}</div>
       <div class="product-price">₹${p.price.toLocaleString('en-IN')}</div>
     </div>
   </div>`;
@@ -383,20 +386,22 @@ function filterAndGo(cat){
   if(btn)filterProducts(cat,btn);
 }
 
-function showProduct(id){
-  const p=products.find(x=>x.id===id);
-  const sizes=p.cat==='jeans'?['28','30','32','34','36']:p.cat==='accessory'?['One Size']:['XS','S','M','L','XL'];
-  document.getElementById('product-detail-content').innerHTML=`
+function showProduct(id) {
+  const p = products.find(x => x.id === id);
+  const sizes = p.cat === 'jeans' ? ['28','30','32','34','36'] : p.cat === 'accessory' ? ['One Size'] : ['XS','S','M','L','XL'];
+  document.getElementById('product-detail-content').innerHTML = `
     <button class="back-btn" onclick="history.back();showPage('shop')">← Back to Shop</button>
     <div class="detail-grid">
-      <div class="detail-img">${p.emoji}</div>
+      <div class="detail-img">
+        <img src="${p.img}" style="width:100%; height:100%; object-fit:cover;">
+      </div>
       <div class="detail-info">
         <p class="detail-tag">${p.cat}</p>
         <h1 class="detail-name">${p.name}</h1>
         <p class="detail-price">₹${p.price.toLocaleString('en-IN')}</p>
-        <p class="detail-desc">${p.desc} Stonewashed for softness. Cut and sewn in our Delhi studio. 100% cotton denim.</p>
+        <p class="detail-desc">${p.desc}</p>
         <p class="size-label">Select Size</p>
-        <div class="sizes">${sizes.map((s,i)=>`<button class="size-btn ${i===1?'active':''}" onclick="selectSize(this)">${s}</button>`).join('')}</div>
+        <div class="sizes">${sizes.map((s, i) => `<button class="size-btn ${i === 1 ? 'active' : ''}" onclick="selectSize(this)">${s}</button>`).join('')}</div>
         <button class="add-cart" onclick="addToCart(${p.id})">Add to Cart</button>
       </div>
     </div>`;
@@ -425,11 +430,12 @@ function renderCart(){
   const summary=document.getElementById('cart-summary-container');
   if(cart.length===0){
     container.innerHTML='<div class="cart-empty"><p style="font-size:3rem;margin-bottom:1rem">🛒</p><p>Your cart is empty</p><button class="btn-primary" style="margin-top:1.5rem" onclick="showPage(\'shop\')">Shop Now</button></div>';
-    summary.innerHTML='';return;
+    summary.innerHTML='';
+    return;
   }
   container.innerHTML=cart.map(i=>`
     <div class="cart-item">
-      <div class="cart-item-img">${i.emoji}</div>
+      <div class="cart-item-img"><img src="${i.img}" style="width:100%; height:100%; object-fit:cover;"></div>
       <div class="cart-item-info">
         <div class="cart-item-name">${i.name}</div>
         <div class="cart-item-meta">Qty: ${i.qty}</div>
@@ -448,25 +454,34 @@ function renderCart(){
   </div>`;
 }
 
-function removeFromCart(id){cart=cart.filter(i=>i.id!==id);updateCartCount();renderCart();}
+function removeFromCart(id){
+  cart=cart.filter(i=>i.id!==id);
+  updateCartCount();
+  renderCart();
+}
 
 function goCheckout(total){
   document.getElementById('checkout-total').textContent=`Order Total: ₹${total.toLocaleString('en-IN')}`;
   showPage('checkout');
 }
 
-function placeOrder(){showToast('Order placed! Redirecting to Stripe... (demo mode)');cart=[];updateCartCount();}
+function placeOrder(){
+  showToast('Order placed! Redirecting to Stripe... (demo mode)');
+  cart=[];
+  updateCartCount();
+}
 
 function showPage(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  if(p==='cart')renderCart();
+  if(p==='cart') renderCart();
   window.scrollTo(0,0);
 }
 
 function showToast(msg){
   const t=document.getElementById('toast');
-  t.textContent=msg;t.style.display='block';
+  t.textContent=msg;
+  t.style.display='block';
   setTimeout(()=>t.style.display='none',3000);
 }
 </script>
