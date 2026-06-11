@@ -10,7 +10,6 @@
     --indigo:#1a2a4a;--denim:#2d4a7a;--mid:#4a6fa5;--light:#b8cce4;--cream:#f5f0e8;--rust:#8b4513;--worn:#6b5a3e;--text:#1a1a1a;--muted:#5a5a5a;--white:#fff;
   }
   body{font-family:'Georgia',serif;background:var(--cream);color:var(--text);}
-  /* NAV */
   nav{background:var(--indigo);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;}
   .logo{color:var(--cream);font-size:1.5rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;}
   .logo span{color:var(--rust);}
@@ -19,10 +18,8 @@
   .nav-links a:hover{color:var(--cream);}
   .cart-btn{background:var(--rust);color:var(--cream);border:none;padding:.5rem 1.2rem;cursor:pointer;font-family:'Arial',sans-serif;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;transition:background .2s;}
   .cart-btn:hover{background:#a0522d;}
-  /* PAGES */
   .page{display:none;}
   .page.active{display:block;}
-  /* HERO */
   .hero{background:linear-gradient(135deg,var(--indigo) 0%,var(--denim) 60%,var(--worn) 100%);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 5%;position:relative;overflow:hidden;}
   .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'%3E%3Cline x1='0' y1='15' x2='60' y2='15'/%3E%3Cline x1='0' y1='30' x2='60' y2='30'/%3E%3Cline x1='0' y1='45' x2='60' y2='45'/%3E%3C/g%3E%3C/svg%3E");}
   .hero-content{position:relative;z-index:1;}
@@ -34,28 +31,23 @@
   .btn-primary:hover{background:#a0522d;transform:translateY(-1px);}
   .btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(255,255,255,.4);padding:.9rem 2.5rem;font-family:'Arial',sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-left:1rem;transition:all .2s;}
   .btn-outline:hover{background:rgba(255,255,255,.08);}
-  /* SECTION */
   section{padding:5rem 5%;}
   .section-title{text-align:center;margin-bottom:3rem;}
   .section-tag{font-family:'Arial',sans-serif;font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--rust);margin-bottom:.5rem;}
   .section-title h2{font-size:2.2rem;color:var(--indigo);}
-  /* FEATURED */
   .featured{background:var(--white);}
   .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem;}
-  .product-card{cursor:pointer;group:;}
-  .product-img{background:linear-gradient(145deg,var(--denim),var(--indigo));height:320px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-  .product-img-inner{font-size:5rem;opacity:.4;}
-  .product-badge{position:absolute;top:1rem;left:1rem;background:var(--rust);color:var(--cream);font-size:.7rem;letter-spacing:1px;padding:.25rem .6rem;font-family:'Arial',sans-serif;text-transform:uppercase;}
+  .product-card{cursor:pointer;}
+  .product-img{height:320px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:0;}
+  .product-badge{position:absolute;top:1rem;left:1rem;background:var(--rust);color:var(--cream);font-size:.7rem;letter-spacing:1px;padding:.25rem .6rem;font-family:'Arial',sans-serif;text-transform:uppercase;z-index:1;}
   .product-info{padding:1rem 0;}
   .product-name{font-size:1rem;color:var(--indigo);margin-bottom:.25rem;}
   .product-desc{font-size:.85rem;color:var(--muted);margin-bottom:.5rem;font-family:'Arial',sans-serif;}
   .product-price{font-size:1.1rem;color:var(--rust);font-family:'Arial',sans-serif;font-weight:bold;}
   .product-card:hover .product-img{filter:brightness(1.1);}
-  /* BANNER */
   .banner{background:var(--indigo);text-align:center;padding:4rem 5%;color:var(--cream);}
   .banner h2{font-size:2rem;margin-bottom:1rem;}
   .banner p{color:var(--light);margin-bottom:2rem;font-family:'Arial',sans-serif;}
-  /* SHOP PAGE */
   .shop-header{background:var(--indigo);padding:3rem 5%;text-align:center;}
   .shop-header h1{color:var(--cream);font-size:2.5rem;}
   .shop-header p{color:var(--light);font-family:'Arial',sans-serif;margin-top:.5rem;}
@@ -63,11 +55,9 @@
   .filter-btn{background:transparent;border:1px solid var(--light);color:var(--muted);padding:.4rem 1rem;font-family:'Arial',sans-serif;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
   .filter-btn.active,.filter-btn:hover{background:var(--indigo);color:var(--cream);border-color:var(--indigo);}
   .shop-grid{padding:2rem 5%;background:var(--cream);}
-  /* PRODUCT DETAIL */
   .product-detail{padding:3rem 5%;background:var(--cream);}
   .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1100px;margin:0 auto;}
-  .detail-img{background:linear-gradient(145deg,var(--denim),var(--indigo));height:500px;display:flex;align-items:center;justify-content:center;font-size:8rem;opacity:.5;}
-  .detail-info{}
+  .detail-img{height:500px;overflow:hidden;padding:0;}
   .detail-tag{font-family:'Arial',sans-serif;font-size:.75rem;letter-spacing:3px;color:var(--rust);text-transform:uppercase;margin-bottom:.5rem;}
   .detail-name{font-size:2rem;color:var(--indigo);margin-bottom:.5rem;}
   .detail-price{font-size:1.8rem;color:var(--rust);font-family:'Arial',sans-serif;margin-bottom:1.5rem;}
@@ -80,12 +70,11 @@
   .add-cart:hover{background:var(--denim);}
   .back-btn{background:transparent;border:none;color:var(--muted);font-family:'Arial',sans-serif;font-size:.85rem;cursor:pointer;margin-bottom:2rem;display:flex;align-items:center;gap:.5rem;padding:0;}
   .back-btn:hover{color:var(--indigo);}
-  /* CART */
   .cart-page{max-width:900px;margin:0 auto;padding:3rem 5%;}
   .cart-page h1{font-size:2rem;color:var(--indigo);margin-bottom:2rem;}
   .cart-empty{text-align:center;padding:4rem;color:var(--muted);font-family:'Arial',sans-serif;}
   .cart-item{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid #e0d8cc;align-items:center;}
-  .cart-item-img{width:80px;height:80px;background:linear-gradient(145deg,var(--denim),var(--indigo));flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:2rem;opacity:.6;}
+  .cart-item-img{width:80px;height:80px;flex-shrink:0;overflow:hidden;}
   .cart-item-info{flex:1;}
   .cart-item-name{font-size:1rem;color:var(--indigo);margin-bottom:.25rem;}
   .cart-item-meta{font-size:.85rem;color:var(--muted);font-family:'Arial',sans-serif;}
@@ -96,7 +85,6 @@
   .cart-row.total{font-size:1.2rem;color:var(--indigo);border-top:1px solid #e0d8cc;padding-top:1rem;margin-top:.5rem;}
   .checkout-btn{background:var(--rust);color:var(--cream);border:none;width:100%;padding:1rem;font-family:'Arial',sans-serif;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-top:1.5rem;transition:background .2s;}
   .checkout-btn:hover{background:#a0522d;}
-  /* CHECKOUT */
   .checkout-page{max-width:700px;margin:0 auto;padding:3rem 5%;}
   .checkout-page h1{font-size:2rem;color:var(--indigo);margin-bottom:.5rem;}
   .checkout-page p{font-family:'Arial',sans-serif;color:var(--muted);margin-bottom:2rem;font-size:.9rem;}
@@ -107,10 +95,9 @@
   .form-group label{font-family:'Arial',sans-serif;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
   .form-group input,.form-group select{border:1px solid #d0c8b8;background:var(--white);padding:.75rem;font-family:'Arial',sans-serif;font-size:.9rem;color:var(--text);outline:none;}
   .form-group input:focus,.form-group select:focus{border-color:var(--denim);}
-  .stripe-note{background:#f0f7ff;border:1px solid #b8d4f0;padding:1rem;font-family:'Arial',sans-serif;font-size:.85rem;color:#2d5a9e;display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;}
+  .upi-note{background:#f0fff4;border:1px solid #b2dfdb;padding:1rem;font-family:'Arial',sans-serif;font-size:.85rem;color:#2e7d32;display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;}
   .pay-btn{background:var(--rust);color:var(--cream);border:none;width:100%;padding:1.1rem;font-family:'Arial',sans-serif;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
   .pay-btn:hover{background:#a0522d;}
-  /* ABOUT */
   .about-hero{background:var(--indigo);padding:5rem 5%;text-align:center;}
   .about-hero h1{color:var(--cream);font-size:3rem;}
   .about-hero p{color:var(--light);max-width:600px;margin:.5rem auto 0;font-family:'Arial',sans-serif;line-height:1.8;}
@@ -121,7 +108,6 @@
   .value-card{background:var(--white);padding:1.5rem;border-left:3px solid var(--rust);}
   .value-card h4{color:var(--indigo);margin-bottom:.5rem;font-size:1rem;}
   .value-card p{font-family:'Arial',sans-serif;font-size:.85rem;color:var(--muted);line-height:1.7;}
-  /* CONTACT */
   .contact-page{padding:4rem 5%;max-width:700px;margin:0 auto;}
   .contact-page h1{font-size:2.5rem;color:var(--indigo);margin-bottom:.5rem;}
   .contact-page > p{font-family:'Arial',sans-serif;color:var(--muted);margin-bottom:2.5rem;}
@@ -129,14 +115,12 @@
   .contact-form .form-group textarea{resize:vertical;min-height:140px;}
   .send-btn{background:var(--indigo);color:var(--cream);border:none;padding:1rem 3rem;font-family:'Arial',sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
   .send-btn:hover{background:var(--denim);}
-  /* FOOTER */
   footer{background:var(--indigo);color:var(--light);padding:3rem 5%;font-family:'Arial',sans-serif;}
   .footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:2rem;margin-bottom:2rem;}
   .footer-col h4{color:var(--cream);letter-spacing:2px;font-size:.8rem;text-transform:uppercase;margin-bottom:1rem;}
   .footer-col p,.footer-col a{font-size:.85rem;color:var(--light);display:block;text-decoration:none;margin-bottom:.4rem;cursor:pointer;}
   .footer-col a:hover{color:var(--cream);}
   .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4);}
-  /* TOAST */
   .toast{position:fixed;bottom:2rem;right:2rem;background:var(--indigo);color:var(--cream);padding:1rem 1.5rem;font-family:'Arial',sans-serif;font-size:.85rem;z-index:999;display:none;animation:slideIn .3s ease;}
   @keyframes slideIn{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
   @media(max-width:768px){
@@ -163,14 +147,13 @@
 <div id="page-home" class="page active">
   <div class="hero">
     <div class="hero-content">
-      <p class="hero-tag">Est. 2024 · Handcrafted Denim</p>
+      <p class="hero-tag">Est. 2026 · Handcrafted Denim</p>
       <h1>Wear the <em>Story</em><br>of Every Thread</h1>
       <p>Premium denim crafted for those who live boldly. From raw selvedge to washed vintage — each piece tells a story.</p>
       <button class="btn-primary" onclick="showPage('shop')">Shop Collection</button>
       <button class="btn-outline" onclick="showPage('about')">Our Story</button>
     </div>
   </div>
-
   <section class="featured">
     <div class="section-title">
       <p class="section-tag">New Arrivals</p>
@@ -178,23 +161,21 @@
     </div>
     <div class="products-grid" id="featured-grid"></div>
   </section>
-
   <div class="banner">
     <h2>Free Shipping Over ₹2,999</h2>
     <p>Handstitched, stonewashed, and built to last. Every pair tells a story.</p>
     <button class="btn-primary" onclick="showPage('shop')">Explore All</button>
   </div>
-
   <section>
     <div class="section-title">
       <p class="section-tag">Why Denim Studio</p>
       <h2>Crafted Different</h2>
     </div>
     <div class="values-grid">
-      <div class="value-card"><h4>Raw Selvedge</h4><p>Japanese and Indian mill denim, woven on vintage shuttle looms for that authentic edge.</p></div>
-      <div class="value-card"><h4>Ethical Production</h4><p>Made in small batches by skilled artisans. Fair wages, fair trade, no shortcuts.</p></div>
-      <div class="value-card"><h4>Built to Last</h4><p>Heavy-duty stitching and reinforced seams. These are jeans for a lifetime, not a season.</p></div>
-      <div class="value-card"><h4>Fades With You</h4><p>Raw denim that develops its own character over time — your wear, your fade.</p></div>
+      <div class="value-card"><h4>Handmade</h4><p>Every piece is cut, sewn and finished by hand in our Delhi studio.</p></div>
+      <div class="value-card"><h4>Custom Orders</h4><p>Get it made your way — size, fit, wash, embroidery, all customizable.</p></div>
+      <div class="value-card"><h4>Embroidery</h4><p>Detailed hand and machine embroidery on shirts, jackets, pants and more.</p></div>
+      <div class="value-card"><h4>Built to Last</h4><p>Heavy-duty stitching and reinforced seams. Clothes for a lifetime, not a season.</p></div>
     </div>
   </section>
 </div>
@@ -236,8 +217,8 @@
 <div id="page-checkout" class="page">
   <div class="checkout-page">
     <h1>Checkout</h1>
-    <p>Secure payment powered by Stripe</p>
-    <div class="stripe-note">🔒 Your payment is encrypted and secure via Stripe</div>
+    <p>Secure payment via UPI — GPay, PhonePe, Paytm & all UPI apps accepted.</p>
+    <div class="upi-note">✅ Pay instantly via UPI — zero fees, direct to our account</div>
     <div class="checkout-section">
       <h3>Contact</h3>
       <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"/></div>
@@ -255,15 +236,7 @@
       </div>
       <div class="form-group"><label>State</label><select><option>Delhi</option><option>Maharashtra</option><option>Karnataka</option><option>Tamil Nadu</option></select></div>
     </div>
-    <div class="checkout-section">
-      <h3>Payment (Stripe)</h3>
-      <div class="form-group"><label>Card number</label><input type="text" placeholder="1234 5678 9012 3456"/></div>
-      <div class="form-row">
-        <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY"/></div>
-        <div class="form-group"><label>CVC</label><input type="text" placeholder="123"/></div>
-      </div>
-    </div>
-    <div id="checkout-total" style="font-family:'Arial',sans-serif;font-size:1rem;color:var(--indigo);margin-bottom:1rem;"></div>
+    <div id="checkout-total"></div>
     <button class="pay-btn" onclick="placeOrder()">Pay & Place Order</button>
   </div>
 </div>
@@ -272,19 +245,19 @@
 <div id="page-about" class="page">
   <div class="about-hero">
     <h1>Our Story</h1>
-    <p>Born from a love of raw fabric, honest craft, and clothes that age beautifully.</p>
+    <p>Born from a love of craft, creativity, and clothes that mean something.</p>
   </div>
   <div class="about-body">
     <h2>Where It All Started</h2>
-    <p>Denim Studio was born in a small workshop in Delhi, where a group of artisans decided the world needed fewer throwaway clothes and more pieces worth keeping. We started with one fabric, one silhouette, and one obsession: making the perfect pair of jeans.</p>
-    <h2>The Craft</h2>
-    <p>We source our denim from heritage mills — both in Japan and in Ahmedabad, Gujarat — where shuttle looms still run the way they did decades ago. The result is a fabric with natural slub, character, and the ability to fade uniquely with each wearer. Every garment is cut and sewn by hand in our Delhi studio.</p>
+    <p>Denim Studio started as a single workshop in Delhi with one goal — to make clothes worth keeping. We handcraft every piece ourselves: shirts, pants, jackets, t-shirts and accessories, all made to order right here in the capital.</p>
+    <h2>What We Do</h2>
+    <p>We specialize in handmade denim and fabric clothing with full customization. Want embroidery on your jacket? A custom fit on your jeans? A unique design on your shirt? We do it all — in-house, by hand, with care.</p>
     <h2>Our Promise</h2>
-    <p>No fast fashion. No cutting corners. Every piece is built to last years, not seasons. We believe in clothes that become yours — that bear the marks of your life, your fades, your adventures.</p>
+    <p>No mass production. No shortcuts. Every piece is built for you — your size, your style, your story. We believe the best clothes are the ones made with intention.</p>
     <div class="values-grid">
-      <div class="value-card"><h4>Delhi Made</h4><p>Designed and stitched in our studio in the heart of Delhi.</p></div>
-      <div class="value-card"><h4>Sustainably Sourced</h4><p>Mill-direct denim. No middlemen. Transparent supply chain.</p></div>
-      <div class="value-card"><h4>Small Batches</h4><p>We don't overproduce. Each collection is limited and intentional.</p></div>
+      <div class="value-card"><h4>Delhi Made</h4><p>Designed, stitched and finished in our studio in the heart of Delhi.</p></div>
+      <div class="value-card"><h4>Full Customization</h4><p>Shirts, pants, jackets, t-shirts — customized to your exact fit and style.</p></div>
+      <div class="value-card"><h4>Embroidery Work</h4><p>Hand and machine embroidery on any garment. Floral, geometric, text — you name it.</p></div>
     </div>
   </div>
 </div>
@@ -326,58 +299,51 @@
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
-      <p>hello@denimstudio.in</p>
-      <p>+91 98765 43210</p>
+      <p>navack2026@gmail.com</p>
+      <p>+91 84483 69385</p>
       <p>Delhi, India</p>
     </div>
   </div>
-  <div class="footer-bottom">© 2024 Denim Studio. All rights reserved.</div>
+  <div class="footer-bottom">© 2026 Denim Studio. All rights reserved.</div>
 </footer>
 
 <div class="toast" id="toast"></div>
 
 <script>
 const products=[
-  {id:1,name:'Embroidered Denim Vest',cat:'jacket',price:2499,badge:'New',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/f_auto,q_auto/WhatsApp_Image_2026-05-08_at_7.35.01_PM_l41oou.jpg',desc:'Handcrafted black denim vest with intricate white floral embroidery. Soft, breathable & made with love in our Delhi studio.'},
-  {id:2,name:'Linen Cargo Pants — Ivory',cat:'jeans',price:1999,badge:'',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/f_auto,q_auto/WhatsApp_Image_2026-05-08_at_7.23.54_PM_kch7q5.jpg',desc:'Relaxed ivory linen-blend cargo pants with drawstring waist and utility side pocket. Timeless comfort, natural elegance.'},
-  {id:3,name:'Camo Tote Bag',cat:'accessory',price:1299,badge:'Bestseller',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/f_auto,q_auto/WhatsApp_Image_2026-05-08_at_7.23.55_PM_fttnpr.jpg',desc:'Heavy-duty camo canvas tote with front button pocket and embroidered Army Corps badge. Rugged carry for everyday use.'},
-  {id:4,name:'Camo Sleeveless Jacket',cat:'jacket',price:3499,badge:'Limited',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/f_auto,q_auto/WhatsApp_Image_2026-05-10_at_4.15.53_PM_sbky5c.jpg',desc:'Military camo sleeveless jacket with dual chest pockets, embroidered badge detail and bold inner lining. Rookie Edition.'},
-  {id:5,name:'Work Shirt — Indigo',cat:'shirt',price:1599,badge:'',img:'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80',desc:'Lightweight chambray work shirt in deep indigo. Spread collar, two flap pockets.'},
-  {id:6,name:'Western Snap Shirt',cat:'shirt',price:1799,badge:'New',img:'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&q=80',desc:'Vintage-wash denim western shirt with pearlescent snap buttons. Built for the road.'},
-  {id:7,name:'Cutoff Shorts',cat:'shorts',price:1299,badge:'',img:'https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&q=80',desc:'Cut and frayed from our raw denim deadstock. Unfinished hem, relaxed through the hip.'},
-  {id:8,name:'Belt — Tan Leather',cat:'accessory',price:799,badge:'',img:'https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=600&q=80',desc:'Full-grain tan leather belt with a raw brass buckle. The perfect finish.'},
-  {id:9,name:'Canvas Tote — Raw',cat:'accessory',price:649,badge:'',img:'https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80',desc:'Heavyweight raw canvas tote with Denim Studio stamp. Carries everything you need.'},
-  {id:10,name:'Selvedge ID Cap',cat:'accessory',price:899,badge:'Limited',img:'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80',desc:'Unstructured 6-panel cap made from selvedge denim offcuts. One size.'},
-  {id:11,name:'High Rise Mom Jean',cat:'jeans',price:2199,badge:'',img:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80',desc:'High-waisted relaxed mom fit in a vintage acid wash. Cropped ankle length.'},
-  {id:12,name:'Double Knee Painter',cat:'jeans',price:2799,badge:'New',img:'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80',desc:'Work pant silhouette with reinforced double knee panels in rigid indigo denim.'},
+  {id:1,name:'Camo Tote Bag — Ivory',cat:'accessory',price:1999,badge:'',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680171/WhatsApp_Image_2026-05-08_at_7.23.55_PM_fttnpr.jpg',desc:'Relaxed ivory linen-blend cargo pants with drawstring waist and utility side pocket. Timeless comfort, natural elegance.'},
+  {id:2,name:'Camo Sleeveless Jacket',cat:'jacket',price:3499,badge:'Limited',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680171/WhatsApp_Image_2026-05-10_at_4.15.53_PM_sbky5c.jpg',desc:'Military camo sleeveless jacket with dual chest pockets, embroidered badge detail and bold inner lining.'},
+  {id:3,name:'Linen Cargo jacket',cat:'jacket',price:1299,badge:'Bestseller',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680171/WhatsApp_Image_2026-05-08_at_7.23.54_PM_kch7q5.jpg',desc:'Heavy-duty camo canvas tote with front button pocket and embroidered Army Corps badge. Rugged carry for everyday use.'},
+  {id:4,name:'linen cargo jeans',cat:'jeans',price:2499,badge:'New',img:'https://res.cloudinary.com/dzhdwb2zl/image/upload/v1780680170/WhatsApp_Image_2026-05-08_at_7.35.01_PM_l41oou.jpg',desc:'Handcrafted black denim vest with intricate white floral embroidery along the hem. Soft, breathable & made with love.'},
+ 
 ];
 
 let cart=[];
 let currentFilter='all';
 
-function renderProductCard(p, gridId) {
+function renderProductCard(p){
   return `<div class="product-card" onclick="showProduct(${p.id})">
     <div class="product-img">
-      <img src="${p.img}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='https://placehold.co/400x500?text=Denim+Studio'">
-      ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+      <img src="${p.img}" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.style.display='none'"/>
+      ${p.badge?`<span class="product-badge">${p.badge}</span>`:''}
     </div>
     <div class="product-info">
       <div class="product-name">${p.name}</div>
-      <div class="product-desc">${p.cat.charAt(0).toUpperCase() + p.cat.slice(1)}</div>
+      <div class="product-desc">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</div>
       <div class="product-price">₹${p.price.toLocaleString('en-IN')}</div>
     </div>
   </div>`;
 }
 
-document.getElementById('featured-grid').innerHTML=products.slice(0,4).map(p=>renderProductCard(p,'featured-grid')).join('');
-document.getElementById('shop-grid').innerHTML=products.map(p=>renderProductCard(p,'shop-grid')).join('');
+document.getElementById('featured-grid').innerHTML=products.slice(0,4).map(p=>renderProductCard(p)).join('');
+document.getElementById('shop-grid').innerHTML=products.map(p=>renderProductCard(p)).join('');
 
 function filterProducts(cat,btn){
   currentFilter=cat;
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   const filtered=cat==='all'?products:products.filter(p=>p.cat===cat);
-  document.getElementById('shop-grid').innerHTML=filtered.map(p=>renderProductCard(p,'shop-grid')).join('');
+  document.getElementById('shop-grid').innerHTML=filtered.map(p=>renderProductCard(p)).join('');
 }
 
 function filterAndGo(cat){
@@ -386,22 +352,22 @@ function filterAndGo(cat){
   if(btn)filterProducts(cat,btn);
 }
 
-function showProduct(id) {
-  const p = products.find(x => x.id === id);
-  const sizes = p.cat === 'jeans' ? ['28','30','32','34','36'] : p.cat === 'accessory' ? ['One Size'] : ['XS','S','M','L','XL'];
-  document.getElementById('product-detail-content').innerHTML = `
-    <button class="back-btn" onclick="history.back();showPage('shop')">← Back to Shop</button>
+function showProduct(id){
+  const p=products.find(x=>x.id===id);
+  const sizes=p.cat==='jeans'?['28','30','32','34','36']:p.cat==='accessory'?['One Size']:['XS','S','M','L','XL'];
+  document.getElementById('product-detail-content').innerHTML=`
+    <button class="back-btn" onclick="showPage('shop')">← Back to Shop</button>
     <div class="detail-grid">
       <div class="detail-img">
-        <img src="${p.img}" style="width:100%; height:100%; object-fit:cover;">
+        <img src="${p.img}" style="width:100%;height:100%;object-fit:cover;display:block;"/>
       </div>
       <div class="detail-info">
         <p class="detail-tag">${p.cat}</p>
         <h1 class="detail-name">${p.name}</h1>
         <p class="detail-price">₹${p.price.toLocaleString('en-IN')}</p>
-        <p class="detail-desc">${p.desc}</p>
+        <p class="detail-desc">${p.desc} Cut and sewn in our Delhi studio.</p>
         <p class="size-label">Select Size</p>
-        <div class="sizes">${sizes.map((s, i) => `<button class="size-btn ${i === 1 ? 'active' : ''}" onclick="selectSize(this)">${s}</button>`).join('')}</div>
+        <div class="sizes">${sizes.map((s,i)=>`<button class="size-btn ${i===1?'active':''}" onclick="selectSize(this)">${s}</button>`).join('')}</div>
         <button class="add-cart" onclick="addToCart(${p.id})">Add to Cart</button>
       </div>
     </div>`;
@@ -430,12 +396,13 @@ function renderCart(){
   const summary=document.getElementById('cart-summary-container');
   if(cart.length===0){
     container.innerHTML='<div class="cart-empty"><p style="font-size:3rem;margin-bottom:1rem">🛒</p><p>Your cart is empty</p><button class="btn-primary" style="margin-top:1.5rem" onclick="showPage(\'shop\')">Shop Now</button></div>';
-    summary.innerHTML='';
-    return;
+    summary.innerHTML='';return;
   }
   container.innerHTML=cart.map(i=>`
     <div class="cart-item">
-      <div class="cart-item-img"><img src="${i.img}" style="width:100%; height:100%; object-fit:cover;"></div>
+      <div class="cart-item-img">
+        <img src="${i.img}" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+      </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${i.name}</div>
         <div class="cart-item-meta">Qty: ${i.qty}</div>
@@ -454,19 +421,40 @@ function renderCart(){
   </div>`;
 }
 
-function removeFromCart(id){
-  cart=cart.filter(i=>i.id!==id);
-  updateCartCount();
-  renderCart();
-}
+function removeFromCart(id){cart=cart.filter(i=>i.id!==id);updateCartCount();renderCart();}
 
 function goCheckout(total){
-  document.getElementById('checkout-total').textContent=`Order Total: ₹${total.toLocaleString('en-IN')}`;
+  const upi='8448369385@fam';
+  const upiUrl=`upi://pay?pa=${upi}&pn=Denim%20Studio&am=${total}&cu=INR`;
+  const qrApi=`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUrl)}`;
+  document.getElementById('checkout-total').innerHTML=`
+    <p style="font-family:Arial;color:var(--indigo);font-size:1rem;margin-bottom:1rem">
+      Order Total: ₹${total.toLocaleString('en-IN')}
+    </p>
+    <div style="text-align:center;background:#fff;padding:1.5rem;border:1px solid #e0d8cc;">
+      <p style="font-family:Arial;font-size:.85rem;color:var(--muted);margin-bottom:1rem">
+        Scan with any UPI app (GPay, PhonePe, Paytm)
+      </p>
+      <img src="${qrApi}" width="200" height="200"/>
+      <p style="margin-top:1rem;font-family:Arial;font-size:.9rem;color:var(--indigo)">
+        UPI ID: <strong>${upi}</strong>
+      </p>
+      <a href="${upiUrl}" style="display:block;margin-top:1rem;background:var(--rust);color:#fff;padding:.8rem;text-decoration:none;font-family:Arial;font-size:.85rem;letter-spacing:1px">
+        📱 Open UPI App Directly
+      </a>
+      <input type="text" id="utr-input" placeholder="Enter UTR / Transaction ID after payment"
+        style="width:100%;margin-top:1rem;padding:.75rem;border:1px solid #d0c8b8;font-family:Arial;font-size:.85rem"/>
+    </div>`;
   showPage('checkout');
 }
 
 function placeOrder(){
-  showToast('Order placed! Redirecting to Stripe... (demo mode)');
+  const utr=document.getElementById('utr-input')?.value.trim();
+  if(!utr){showToast('Please enter your UTR / Transaction ID');return;}
+  const totalText=document.getElementById('checkout-total').querySelector('p').textContent;
+  const msg=`Hello Denim Studio!%0ANew Order Payment%0AUTR / Transaction ID: ${utr}%0A${totalText}`;
+  window.open(`https://wa.me/918448369385?text=${msg}`,'_blank');
+  showToast('Order placed! Payment details sent to WhatsApp. We will confirm shortly.');
   cart=[];
   updateCartCount();
 }
@@ -474,14 +462,13 @@ function placeOrder(){
 function showPage(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  if(p==='cart') renderCart();
+  if(p==='cart')renderCart();
   window.scrollTo(0,0);
 }
 
 function showToast(msg){
   const t=document.getElementById('toast');
-  t.textContent=msg;
-  t.style.display='block';
+  t.textContent=msg;t.style.display='block';
   setTimeout(()=>t.style.display='none',3000);
 }
 </script>
