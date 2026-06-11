@@ -92,7 +92,7 @@ javascript{
 Contact
 
 WhatsApp: +91 84483 69385
-Email: hello@denimstudio.in
+Email: navack2026@gmail.com
 Location: Delhi, India
 
 
