@@ -1,4 +1,4 @@
-Denim Studio
+Denim Studio - https://project-denim-studio.vercel.app/
 A handcrafted denim clothing store based in Delhi, India. This is the official e-commerce website for Denim Studio — featuring handmade clothes, custom orders, and embroidery work on shirts, pants, jackets, t-shirts, and accessories.
 
 About the Store
